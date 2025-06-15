@@ -10,15 +10,13 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
-        body {
+          body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
-        
-        .container {
+            .container {
             max-width: 800px;
             margin: 0 auto;
             background: white;
@@ -26,83 +24,69 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             overflow: hidden;
         }
-        
-        .header {
+          .header {
             background: linear-gradient(135deg, #2c3e50, #34495e);
             color: white;
             padding: 30px;
             text-align: center;
         }
-        
-        .header h1 {
+            .header h1 {
             font-size: 2.2em;
             margin-bottom: 10px;
         }
-        
-        .header p {
+           .header p {
             opacity: 0.9;
             font-size: 1.1em;
         }
-        
-        .progress-container {
+           .progress-container {
             background: #ecf0f1;
             padding: 20px;
         }
-        
-        .progress-bar {
+            .progress-bar {
             background: #bdc3c7;
             height: 10px;
             border-radius: 5px;
             overflow: hidden;
             margin-bottom: 10px;
         }
-        
-        .progress-fill {
+          .progress-fill {
             background: linear-gradient(90deg, #3498db, #2ecc71);
             height: 100%;
             width: 0%;
             transition: width 0.3s ease;
         }
-        
-        .progress-text {
+           .progress-text {
             text-align: center;
             color: #2c3e50;
             font-weight: bold;
         }
-        
-        .question-container {
+            .question-container {
             padding: 30px;
             display: none;
         }
-        
-        .question-container.active {
+         .question-container.active {
             display: block;
             animation: fadeIn 0.5s ease;
         }
-        
-        @keyframes fadeIn {
+          @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
-        .question-number {
+          .question-number {
             color: #3498db;
             font-weight: bold;
             font-size: 1.1em;
             margin-bottom: 15px;
         }
-        
-        .question {
+         .question {
             font-size: 1.3em;
             color: #2c3e50;
             margin-bottom: 25px;
             line-height: 1.5;
-        }
-        
+        }   
         .options {
             list-style: none;
-        }
-        
+        }  
         .option {
             background: #f8f9fa;
             margin: 12px 0;
@@ -113,8 +97,7 @@
             border: 2px solid transparent;
             position: relative;
             overflow: hidden;
-        }
-        
+        }  
         .option::before {
             content: '';
             position: absolute;
@@ -124,42 +107,35 @@
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
             transition: left 0.5s;
-        }
-        
+        } 
         .option:hover {
             background: #e3f2fd;
             border-color: #3498db;
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
-        }
-        
+        } 
         .option:hover::before {
             left: 100%;
-        }
-        
+        } 
         .option.selected {
             background: #3498db;
             color: white;
             border-color: #2980b9;
-        }
-        
+        }   
         .option.correct {
             background: #27ae60;
             color: white;
             border-color: #229954;
-        }
-        
+        } 
         .option.incorrect {
             background: #e74c3c;
             color: white;
             border-color: #c0392b;
-        }
-        
+        }  
         .option.disabled {
             cursor: not-allowed;
             opacity: 0.7;
-        }
-        
+        } 
         .feedback {
             margin: 20px 0;
             padding: 20px;
@@ -167,34 +143,28 @@
             display: none;
             animation: slideIn 0.5s ease;
         }
-        
         @keyframes slideIn {
             from { opacity: 0; transform: translateX(-20px); }
             to { opacity: 1; transform: translateX(0); }
-        }
-        
+        } 
         .feedback.correct {
             background: #d5f4e6;
             border-left: 5px solid #27ae60;
             color: #155724;
-        }
-        
+        } 
         .feedback.incorrect {
             background: #f8d7da;
             border-left: 5px solid #e74c3c;
             color: #721c24;
         }
-        
         .feedback.show {
             display: block;
-        }
-        
+        } 
         .controls {
             padding: 20px 30px;
             background: #f8f9fa;
             text-align: center;
-        }
-        
+        } 
         .btn {
             background: linear-gradient(135deg, #3498db, #2980b9);
             color: white;
@@ -208,30 +178,25 @@
             margin: 0 10px;
             min-width: 120px;
         }
-        
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
-        }
-        
+        } 
         .btn:disabled {
             background: #bdc3c7;
             cursor: not-allowed;
             transform: none;
             box-shadow: none;
-        }
-        
+        }  
         .results {
             display: none;
             text-align: center;
             padding: 40px;
-        }
-        
+        } 
         .results.show {
             display: block;
             animation: fadeIn 0.8s ease;
         }
-        
         .score-circle {
             width: 150px;
             height: 150px;
@@ -244,36 +209,29 @@
             font-weight: bold;
             color: white;
             background: linear-gradient(135deg, #3498db, #2ecc71);
-        }
-        
+        } 
         .score-excellent {
             background: linear-gradient(135deg, #27ae60, #2ecc71);
-        }
-        
+        }  
         .score-good {
             background: linear-gradient(135deg, #f39c12, #e67e22);
         }
-        
         .score-needs-improvement {
             background: linear-gradient(135deg, #e74c3c, #c0392b);
         }
-        
         .results h2 {
             color: #2c3e50;
             margin-bottom: 20px;
             font-size: 2em;
         }
-        
         .results p {
             color: #7f8c8d;
             font-size: 1.2em;
             margin-bottom: 30px;
-        }
-        
+        } 
         .restart-btn {
             background: linear-gradient(135deg, #9b59b6, #8e44ad);
-        }
-        
+        } 
         .topic-indicator {
             display: inline-block;
             background: #3498db;
@@ -283,33 +241,26 @@
             font-size: 0.85em;
             margin-bottom: 15px;
         }
-        
         @media (max-width: 600px) {
             .container {
                 margin: 10px;
                 border-radius: 15px;
             }
-            
             .header {
                 padding: 20px;
             }
-            
             .header h1 {
                 font-size: 1.8em;
             }
-            
             .question-container {
                 padding: 20px;
             }
-            
             .question {
                 font-size: 1.1em;
             }
-            
             .option {
                 padding: 15px;
             }
-            
             .btn {
                 padding: 12px 20px;
                 margin: 5px;
@@ -324,21 +275,17 @@
             <h1>🔬 Control de Calidad</h1>
             <p>Test sobre Diseño de Experimentos (DOE) y Control Estadístico de Procesos (SPC)</p>
         </div>
-        
         <div class="progress-container">
             <div class="progress-bar">
                 <div class="progress-fill" id="progressFill"></div>
             </div>
             <div class="progress-text" id="progressText">Pregunta 1 de 25</div>
         </div>
-        
         <div id="questionsContainer"></div>
-        
         <div class="controls">
             <button class="btn" id="prevBtn" onclick="previousQuestion()" disabled>⬅️ Anterior</button>
             <button class="btn" id="nextBtn" onclick="nextQuestion()" disabled>Siguiente ➡️</button>
         </div>
-        
         <div class="results" id="results">
             <div class="score-circle" id="scoreCircle">0%</div>
             <h2 id="resultTitle">¡Resultado Final!</h2>
@@ -346,7 +293,6 @@
             <button class="btn restart-btn" onclick="restartTest()">🔄 Reiniciar Test</button>
         </div>
     </div>
-
     <script>
         const questions = [
             {
@@ -650,20 +596,16 @@
                 explanation: "Minitab es un software estadístico especializado que incluye herramientas específicas para DOE, SPC y análisis de calidad, siendo muy usado en la industria."
             }
         ];
-
         let currentQuestion = 0;
         let userAnswers = [];
         let score = 0;
-
         function initializeTest() {
             renderQuestion();
             updateProgress();
         }
-
         function renderQuestion() {
             const container = document.getElementById('questionsContainer');
-            const question = questions[currentQuestion];
-            
+            const question = questions[currentQuestion]; 
             container.innerHTML = `
                 <div class="question-container active">
                     <div class="topic-indicator">${question.topic}</div>
@@ -678,53 +620,42 @@
                     </ul>
                     <div class="feedback" id="feedback"></div>
                 </div>
-            `;
-            
+            `
             document.getElementById('prevBtn').disabled = currentQuestion === 0;
             document.getElementById('nextBtn').disabled = true;
         }
-
         function selectOption(selectedIndex) {
             const options = document.querySelectorAll('.option');
             const feedback = document.getElementById('feedback');
-            const question = questions[currentQuestion];
-            
+            const question = questions[currentQuestion]; 
             // Disable all options
             options.forEach(option => {
                 option.classList.add('disabled');
                 option.onclick = null;
-            });
-            
+            });  
             // Mark selected option
-            options[selectedIndex].classList.add('selected');
-            
+            options[selectedIndex].classList.add('selected');  
             // Show correct answer
-            options[question.correct].classList.add('correct');
-            
+            options[question.correct].classList.add('correct'); 
             // Mark incorrect if wrong selection
             if (selectedIndex !== question.correct) {
                 options[selectedIndex].classList.add('incorrect');
-            }
-            
+            } 
             // Store answer
-            userAnswers[currentQuestion] = selectedIndex;
-            
+            userAnswers[currentQuestion] = selectedIndex; 
             // Show feedback
             const isCorrect = selectedIndex === question.correct;
             feedback.className = `feedback ${isCorrect ? 'correct' : 'incorrect'} show`;
             feedback.innerHTML = `
                 <strong>${isCorrect ? '✅ ¡Correcto!' : '❌ Incorrecto'}</strong><br>
                 ${question.explanation}
-            `;
-            
+            `; 
             if (isCorrect) {
                 score++;
-            }
-            
+            }  
             // Enable next button
             document.getElementById('nextBtn').disabled = false;
         }
-
         function nextQuestion() {
             if (currentQuestion < questions.length - 1) {
                 currentQuestion++;
@@ -734,13 +665,11 @@
                 showResults();
             }
         }
-
         function previousQuestion() {
             if (currentQuestion > 0) {
                 currentQuestion--;
                 renderQuestion();
                 updateProgress();
-                
                 // If question was already answered, show the previous answer
                 if (userAnswers[currentQuestion] !== undefined) {
                     const selectedIndex = userAnswers[currentQuestion];
@@ -748,13 +677,11 @@
                 }
             }
         }
-
         function updateProgress() {
             const progress = ((currentQuestion + 1) / questions.length) * 100;
             document.getElementById('progressFill').style.width = progress + '%';
             document.getElementById('progressText').textContent = `Pregunta ${currentQuestion + 1} de ${questions.length}`;
         }
-
         function showResults() {
             const percentage = Math.round((score / questions.length) * 100);
             const container = document.getElementById('questionsContainer');
@@ -762,14 +689,11 @@
             const results = document.getElementById('results');
             const scoreCircle = document.getElementById('scoreCircle');
             const resultTitle = document.getElementById('resultTitle');
-            const resultMessage = document.getElementById('resultMessage');
-            
+            const resultMessage = document.getElementById('resultMessage'); 
             container.style.display = 'none';
             controls.style.display = 'none';
             results.classList.add('show');
-            
             scoreCircle.textContent = percentage + '%';
-            
             if (percentage >= 90) {
                 scoreCircle.className = 'score-circle score-excellent';
                 resultTitle.textContent = '🏆 ¡Excelente!';
@@ -784,23 +708,18 @@
                 resultMessage.textContent = `Obtuviste ${score} de ${questions.length} respuestas correctas. Te recomiendo revisar los conceptos de DOE y SPC.`;
             }
         }
-
         function restartTest() {
             currentQuestion = 0;
             userAnswers = [];
-            score = 0;
-            
+            score = 0; 
             const container = document.getElementById('questionsContainer');
             const controls = document.querySelector('.controls');
             const results = document.getElementById('results');
-            
             container.style.display = 'block';
             controls.style.display = 'block';
             results.classList.remove('show');
-            
             initializeTest();
         }
-
         // Initialize test when page loads
         window.onload = function() {
             initializeTest();
